@@ -1,4 +1,4 @@
-package ParkingLot;
+package ParkingLot.Model;
 import java.time.*;
 public abstract class BaseClass {
     int id;
