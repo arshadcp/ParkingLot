@@ -9,17 +9,36 @@ import java.util.List;
 public class ParkingFloor extends BaseClass{
     private int FloorNumber;
     private List<ParkingSpot> Spot;
-    private List<Gate> gate;
+    private Gate Entrygate;
+    private Gate Exitgate;
     private ParkingFloorStatus floorStatus;
 
-    public ParkingFloor(int id, LocalDateTime CreatedAt, LocalDateTime UpdatedAt, LocalDateTime CreatedBy, LocalDateTime UpdatedBy, int floorNumber, List<ParkingSpot> spot, List<Gate> gate, ParkingFloorStatus floorStatus) {
+    public ParkingFloor(int id, LocalDateTime CreatedAt, LocalDateTime UpdatedAt, LocalDateTime CreatedBy, LocalDateTime UpdatedBy, int floorNumber, List<ParkingSpot> spot, Gate entrygate, Gate exitgate, ParkingFloorStatus floorStatus) {
         super(id, CreatedAt, UpdatedAt, CreatedBy, UpdatedBy);
         FloorNumber = floorNumber;
         Spot = spot;
-        this.gate = gate;
+        Entrygate = entrygate;
+        Exitgate = exitgate;
         this.floorStatus = floorStatus;
-        gate=new ArrayList<>();
-        Spot=new ArrayList<>();
+    }
+    public ParkingFloor(){
+
+    }
+
+    public Gate getEntrygate() {
+        return Entrygate;
+    }
+
+    public void setEntrygate(Gate entrygate) {
+        Entrygate = entrygate;
+    }
+
+    public Gate getExitgate() {
+        return Exitgate;
+    }
+
+    public void setExitgate(Gate exitgate) {
+        Exitgate = exitgate;
     }
 
     public int getFloorNumber() {
@@ -38,13 +57,6 @@ public class ParkingFloor extends BaseClass{
         Spot = spot;
     }
 
-    public List<Gate> getGate() {
-        return gate;
-    }
-
-    public void setGate(List<Gate> gate) {
-        this.gate = gate;
-    }
 
     public ParkingFloorStatus getFloorStatus() {
         return floorStatus;

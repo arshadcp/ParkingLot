@@ -23,7 +23,7 @@ public class ParkingFloorRepository {
         }
         throw new ParkingFloorNotFoundException("Parking floor not found for id: "+parkingfloorId);
     }
-    public void setParkingFloor(ParkingFloor parkingfloor){
+    public void addParkingFloor(ParkingFloor parkingfloor){
         hmfloor.put(parkingfloor.getId(),parkingfloor);
     }
 }

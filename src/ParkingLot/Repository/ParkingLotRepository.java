@@ -17,12 +17,12 @@ public class ParkingLotRepository {
 
    public ParkingLot getParkingLot(int parkingLotId){
       if(hmLot.containsKey(parkingLotId)){
-         return  hmLot.get(parkingLotId));
+         return  hmLot.get(parkingLotId);
 
       }
-      throw new ParkingFloorNotFoundException("Parking floor not found for id: "+parkingLotId));
+      throw new ParkingFloorNotFoundException("ParkingLot not found for id: "+parkingLotId);
    }
-   public void setParkingFloor(ParkingLot parkingLot){
+   public void addParkingLot(ParkingLot parkingLot){
       hmLot.put(parkingLot.getId(),parkingLot);
    }
 }

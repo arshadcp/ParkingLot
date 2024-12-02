@@ -25,7 +25,7 @@ public class ParkingSpotRepository {
        }
         throw new ParkingSpotNotAvailableException("Parking spot not found for id: "+parkingSpotId);
     }
-    public void setParkingSpot(ParkingSpot parkingSpot){
+    public void addParkingSpot(ParkingSpot parkingSpot){
         hmspot.put(parkingSpot.getId(),parkingSpot);
     }
 }
