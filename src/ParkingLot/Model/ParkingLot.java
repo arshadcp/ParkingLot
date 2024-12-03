@@ -2,8 +2,9 @@ package ParkingLot.Model;
 
 import ParkingLot.Model.ennum.ParkingLotStatus;
 import ParkingLot.Model.ennum.VehicleType;
-import ParkingLot.Service.Strategies.BillCalculationStrategy;
-import ParkingLot.Service.Strategies.SlotAllocationStrategy;
+import ParkingLot.Service.Strategies.BillCalculationStrategy.BillCalculationStrategy;
+import ParkingLot.Service.Strategies.SpotAllocationStrategy.SpotAllocationStrategy;
+import ParkingLot.Service.Strategies.SpotAllocationStrategy.SpotAllocationStrategy;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,10 +18,10 @@ public class ParkingLot extends BaseClass {
         private List<VehicleType> vehicleTypeSupported;
         private ParkingLotStatus parkinglotStatus;
         private BillCalculationStrategy billAllocationStrategy;
-        private SlotAllocationStrategy slotAllocationStrategy;
+        private SpotAllocationStrategy spotAllocationStrategy;
 
 
-        public ParkingLot(int id, LocalDateTime CreatedAt, LocalDateTime UpdatedAt, LocalDateTime CreatedBy, LocalDateTime UpdatedBy, String name, int capacity, String address, List<ParkingFloor> floors, List<VehicleType> vehicleTypeSupported, ParkingLotStatus parkinglotStatus, BillCalculationStrategy billAllocationStrategy, SlotAllocationStrategy slotAllocationStrategy) {
+        public ParkingLot(int id, LocalDateTime CreatedAt, LocalDateTime UpdatedAt, LocalDateTime CreatedBy, LocalDateTime UpdatedBy, String name, int capacity, String address, List<ParkingFloor> floors, List<VehicleType> vehicleTypeSupported, ParkingLotStatus parkinglotStatus, BillCalculationStrategy billAllocationStrategy, SpotAllocationStrategy spotAllocationStrategy) {
                 super(id, CreatedAt, UpdatedAt, CreatedBy, UpdatedBy);
                 this.name = name;
                 this.capacity = capacity;
@@ -29,7 +30,7 @@ public class ParkingLot extends BaseClass {
                 this.vehicleTypeSupported = vehicleTypeSupported;
                 this.parkinglotStatus = parkinglotStatus;
                 this.billAllocationStrategy = billAllocationStrategy;
-                this.slotAllocationStrategy = slotAllocationStrategy;
+                this.spotAllocationStrategy = spotAllocationStrategy;
         }
 
         public ParkingLot(){
@@ -52,12 +53,12 @@ public class ParkingLot extends BaseClass {
                 this.billAllocationStrategy = billAllocationStrategy;
         }
 
-        public SlotAllocationStrategy getSlotAllocationStrategy() {
-                return slotAllocationStrategy;
+        public SpotAllocationStrategy getSlotAllocationStrategy() {
+                return spotAllocationStrategy;
         }
 
-        public void setSlotAllocationStrategy(SlotAllocationStrategy slotAllocationStrategy) {
-                this.slotAllocationStrategy = slotAllocationStrategy;
+        public void setSpotAllocationStrategy(SpotAllocationStrategy spotAllocationStrategy) {
+                this.spotAllocationStrategy = spotAllocationStrategy;
         }
 
         public int getCapacity() {

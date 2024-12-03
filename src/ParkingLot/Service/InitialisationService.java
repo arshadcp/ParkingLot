@@ -14,7 +14,7 @@ public class InitialisationService {
     private  ParkingSpotRepository parkingSpotRepository;
     private TicketRepository ticketRepository;
 
-    public InitialisationService(GateRepository gateRepository, ParkingLotRepository parkingLotRepository, ParkingFloorRepository parkingFloorRepository, ParkingSpotRepository parkingSpotRepository, TicketRepository ticketRepository) {
+    public InitialisationService(GateRepository gateRepository, ParkingLotRepository parkingLotRepository, ParkingFloorRepository parkingFloorRepository, ParkingSpotRepository parkingSpotRepository) {
         this.gateRepository = gateRepository;
         this.parkingLotRepository = parkingLotRepository;
         this.parkingFloorRepository = parkingFloorRepository;

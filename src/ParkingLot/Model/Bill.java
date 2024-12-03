@@ -19,6 +19,9 @@ public class Bill extends BaseClass{
         this.amount = amount;
         this.billStatus = billStatus;
     }
+    public Bill(){
+
+    }
 
     public LocalDateTime getExittime() {
         return Exittime;
