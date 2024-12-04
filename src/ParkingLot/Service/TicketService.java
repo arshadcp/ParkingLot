@@ -1,4 +1,4 @@
-package ParkingLot.Service.Strategies;
+package ParkingLot.Service;
 
 import ParkingLot.Model.*;
 import ParkingLot.Model.ennum.ParkingSpotStatus;

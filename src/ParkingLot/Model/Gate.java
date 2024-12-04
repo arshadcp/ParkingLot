@@ -19,16 +19,16 @@ public class Gate extends BaseClass {
         this.guardname = guardname;
     }
 
-    @Override
-    public String toString() {
-        return "Gate{" +
-                "gateNumber=" + gateNumber +
-                ", gateType=" + gateType +
-                ", gateStatus=" + gateStatus +
-                ", guardname='" + guardname + '\'' +
-                ", id=" + id +
-                '}';
-    }
+  //  @Override
+//    public String toString() {
+//        return "Gate{" +
+//                "gateNumber=" + gateNumber +
+//                ", gateType=" + gateType +
+//                ", gateStatus=" + gateStatus +
+//                ", guardname='" + guardname + '\'' +
+//                ", id=" + id +
+//                '}';
+//    }
 
     public Gate(){
 

@@ -1,10 +1,8 @@
 package ParkingLot.Controller;
 
-import ParkingLot.Model.Gate;
-import ParkingLot.Model.ParkingLot;
 import ParkingLot.Model.Ticket;
 import ParkingLot.Model.Vehicle;
-import ParkingLot.Service.Strategies.TicketService;
+import ParkingLot.Service.TicketService;
 
 public class TicketController {
     TicketService ticketService;

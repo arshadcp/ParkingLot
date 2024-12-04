@@ -1,16 +1,18 @@
 package ParkingLot;
 
+import ParkingLot.Controller.BillController;
 import ParkingLot.Controller.InitController;
 import ParkingLot.Controller.TicketController;
+import ParkingLot.Model.Bill;
 import ParkingLot.Model.Gate;
-import ParkingLot.Model.ParkingFloor;
 import ParkingLot.Model.Ticket;
 import ParkingLot.Model.Vehicle;
 import ParkingLot.Model.ennum.GateStatus;
 import ParkingLot.Model.ennum.VehicleType;
 import ParkingLot.Repository.*;
+import ParkingLot.Service.BillService;
 import ParkingLot.Service.InitialisationService;
-import ParkingLot.Service.Strategies.TicketService;
+import ParkingLot.Service.TicketService;
 
 import java.util.Scanner;
 
@@ -36,6 +38,10 @@ public class ParkingLotMain {
 
         Vehicle vehicle=new Vehicle();
         Gate gate=new Gate();
+        BillService billService=new BillService();
+        BillController billController=new BillController(billService);
+
+
         System.out.println("Please choose an option 1:enter 2:exit");
         int option=sc.nextInt();
         if(option==1) {
@@ -58,8 +64,15 @@ public class ParkingLotMain {
             gate.setGateStatus(GateStatus.OPEN);
             Ticket ticket = ticketController.generateTicket(vehicle, gateId, parkingLotId);
             System.out.println("Ticket details "+ticket);
-        }else{
+        }
+        else if (option==2){
+            System.out.println("Please enter the Billid");
+            int billId=sc.nextInt();
+            System.out.println("Please enter the gateNumber");
+            int exitGateId=sc.nextInt();
 
+            Bill bill=billController.generateBill(billId,exitGateId);
+            System.out.println("Ticket details "+bill);
         }
 
 
