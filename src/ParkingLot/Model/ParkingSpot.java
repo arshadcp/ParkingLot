@@ -21,6 +21,19 @@ public class ParkingSpot extends BaseClass{
         this.vehicleType = vehicleType;
         this.vehicle = vehicle;
     }
+
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "SpotNumber=" + SpotNumber +
+                ", parkingSpotStatus=" + parkingSpotStatus +
+                ", parkingSpotType=" + parkingSpotType +
+                ", vehicleType=" + vehicleType +
+                ", vehicle=" + vehicle +
+                ", id=" + id +
+                '}';
+    }
+
     public ParkingSpot(){
 
     }

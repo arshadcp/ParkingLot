@@ -16,6 +16,18 @@ public class Ticket extends  BaseClass{
     this.vehicle = vehicle;
     Entrygate = entrygate;
   }
+
+  @Override
+  public String toString() {
+    return "Ticket{" +
+            "parkingSpot=" + parkingSpot +
+            ", Entrytime=" + Entrytime +
+            ", vehicle=" + vehicle +
+            ", Entrygate=" + Entrygate +
+            ", id=" + id +
+            '}';
+  }
+
   public Ticket(){
 
   }

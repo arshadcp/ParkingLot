@@ -10,6 +10,7 @@ import java.util.HashMap;
 public class TicketRepository {
 
     private HashMap<Integer, Ticket> hmticket;
+    private static int idCounter=0;
 
 
     public TicketRepository() {
@@ -23,7 +24,13 @@ public class TicketRepository {
         }
         throw new TicketNotFoundException("Ticket not found for id: "+ticketId);
     }
-    public void add(Ticket ticket){
+
+
+
+    public Ticket add(Ticket ticket){
+       ticket.setId(++idCounter);
         hmticket.put(ticket.getId(),ticket);
+        System.out.println("ticket is added successfully");
+        return hmticket.get(idCounter);
     }
 }

@@ -10,6 +10,7 @@ public class Vehicle extends BaseClass{
    private VehicleType vehicleType;
 
 
+
    public Vehicle(){
 
    }
@@ -18,6 +19,15 @@ public class Vehicle extends BaseClass{
       super(id, CreatedAt, UpdatedAt, CreatedBy, UpdatedBy);
       this.vehicleNumber = vehicleNumber;
       this.vehicleType = vehicleType;
+   }
+
+   @Override
+   public String toString() {
+      return "Vehicle{" +
+              "vehicleNumber='" + vehicleNumber + '\'' +
+              ", vehicleType=" + vehicleType +
+              ", id=" + id +
+              '}';
    }
 
    public String getVehicleNumber() {

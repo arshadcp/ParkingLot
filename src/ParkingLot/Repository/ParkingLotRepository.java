@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class ParkingLotRepository {
 
    private HashMap<Integer, ParkingLot> hmLot;
+   private static int idCounter=0;
 
 
    public ParkingLotRepository() {
@@ -23,6 +24,7 @@ public class ParkingLotRepository {
       throw new ParkingFloorNotFoundException("ParkingLot not found for id: "+parkingLotId);
    }
    public void addParkingLot(ParkingLot parkingLot){
+      parkingLot.setId(++idCounter);
       hmLot.put(parkingLot.getId(),parkingLot);
    }
 }

@@ -53,7 +53,7 @@ public class ParkingLot extends BaseClass {
                 this.billAllocationStrategy = billAllocationStrategy;
         }
 
-        public SpotAllocationStrategy getSlotAllocationStrategy() {
+        public SpotAllocationStrategy getSpotAllocationStrategy() {
                 return spotAllocationStrategy;
         }
 

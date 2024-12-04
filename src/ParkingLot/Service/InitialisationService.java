@@ -33,7 +33,7 @@ public class InitialisationService {
         v.add(VehicleType.CAR);
         v.add(VehicleType.Bike);
          parkinglot.setVehicleTypeSupported(v);
-         parkinglot.setCapacity(100);
+         parkinglot.setCapacity(1000);
          parkinglot.setParkinglotStatus(ParkingLotStatus.OPEN);
 
 
@@ -42,7 +42,7 @@ public class InitialisationService {
      for(int i=0;i<10;i++){
             ParkingFloor parkingfloor=new ParkingFloor();//each floor have a new floor object
             parkingfloor.setFloorNumber(i);
-            parkingfloor.setId(i*10+1);
+            parkingfloor.setId(i);
             parkingfloor.setFloorStatus(ParkingFloorStatus.OPEN);
 
 
@@ -65,19 +65,19 @@ public class InitialisationService {
 
 
          Gate Entrygate=new Gate();
-        Entrygate.setGateNumber(i*300+1);
+        Entrygate.setGateNumber(i*100+1);
          Entrygate.setGateStatus(GateStatus.OPEN);
          Entrygate.setGateType(GateType.ENTRY_GATE);
-         Entrygate.setId(i*500+1);
+         Entrygate.setId(i*1000+1);
          Entrygate.setGuardname("Entrygate guard");
 
          parkingfloor.setEntrygate(Entrygate);
 
          Gate Exitgate=new Gate();
-         Exitgate.setGateNumber(i*200+1);
+         Exitgate.setGateNumber(i*100+2);
          Exitgate.setGateStatus(GateStatus.OPEN);
          Exitgate.setGateType(GateType.EXIT_GATE);
-         Exitgate.setId(i*100+1);
+         Exitgate.setId(i*1000+2);
          Exitgate.setGuardname("exitgate guard");
          parkingfloor.setExitgate(Exitgate);
 
